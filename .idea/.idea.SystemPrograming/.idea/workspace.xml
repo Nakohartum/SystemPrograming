@@ -25,10 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8849129-d047-452f-8b84-8cc8599e93a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code/TaskExample.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code/TaskExample.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code/LessThenTen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code/LessThenTen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code/Parallel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Root/Code/Parallel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SystemPrograming/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SystemPrograming/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SystemPrograming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SystemPrograming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Root/Code/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Root/Code/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,8 @@
         <option value="$PROJECT_DIR$/Assets/_Root/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Code/Unit.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Code/TaskExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Code/LessThenTen.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Root/Code/Parallel.cs" />
         <option value="$PROJECT_DIR$/Assets/_Root/Code/Main.cs" />
       </list>
     </option>
@@ -97,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677133944706</updated>
       <workItem from="1677133998751" duration="7980000" />
-      <workItem from="1677143667444" duration="681000" />
+      <workItem from="1677143667444" duration="941000" />
+      <workItem from="1677749662559" duration="1358000" />
     </task>
     <servers />
   </component>

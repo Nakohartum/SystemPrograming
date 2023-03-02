@@ -8,7 +8,9 @@
       <e p="Assets" t="Include">
         <e p="_Root" t="Include">
           <e p="Code" t="Include">
+            <e p="LessThenTen.cs" t="Include" />
             <e p="Main.cs" t="Include" />
+            <e p="Parallel.cs" t="Include" />
             <e p="TaskExample.cs" t="Include" />
             <e p="Unit.cs" t="Include" />
           </e>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Unity.Collections;
+using Unity.Jobs;
 using UnityEngine;
 
 namespace _Root.Code
@@ -8,14 +10,69 @@ namespace _Root.Code
     public class Main : MonoBehaviour
     {
         [SerializeField] private Unit _unit;
+        [SerializeField] private Vector3[] _vector3s;
+        [SerializeField] private Vector3[] _velocities;
         public bool IsHealing;
         private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         private CancellationToken _cancellationToken;
         private bool _result;
+        
+        
         private void Start()
         {
-            _cancellationToken = _cancellationTokenSource.Token;
-            GetResult();
+            
+        }
+
+        private void TestIJobParallel()
+        {
+            NativeArray<Vector3> positions = new NativeArray<Vector3>(10, Allocator.Persistent);
+            NativeArray<Vector3> velocities = new NativeArray<Vector3>(10, Allocator.Persistent);
+            NativeArray<Vector3> finalPositions = new NativeArray<Vector3>(10, Allocator.Persistent);
+
+            for (int i = 0; i < positions.Length; i++)
+            {
+                positions[i] = _vector3s[i];
+                velocities[i] = _velocities[i];
+            }
+
+            Parallel parallel = new Parallel(positions, velocities, finalPositions);
+
+            JobHandle hanlde = parallel.Schedule(10, 0);
+            hanlde.Complete();
+
+            for (int i = 0; i < finalPositions.Length; i++)
+            {
+                Debug.Log($"Position: {finalPositions[i]}");
+            }
+
+            positions.Dispose();
+            velocities.Dispose();
+            finalPositions.Dispose();
+        }
+        
+        private void TestIJob()
+        {
+            NativeArray<int> ints = new NativeArray<int>(10, Allocator.Persistent);
+            for (int i = 0; i < ints.Length; i++)
+            {
+                ints[i] = i + 3;
+            }
+
+            for (int i = 0; i < ints.Length; i++)
+            {
+                Debug.Log($"Old value of {i}: {ints[i]}");
+            }
+            
+            LessThenTen lessThenTen = new LessThenTen(ints);
+            JobHandle handle = lessThenTen.Schedule();
+            handle.Complete();
+            
+            for (int i = 0; i < ints.Length; i++)
+            {
+                Debug.Log($"New value of {i}: {ints[i]}");
+            }
+            
+            ints.Dispose();
         }
 
         private async void GetResult()
